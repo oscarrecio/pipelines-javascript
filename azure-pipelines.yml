@@ -12,8 +12,8 @@ strategy:
   matrix:
     node_8_x:
       node_version: 8.x
-    node_9_x:
-      node_version: 9.x
+    node_10_x:
+      node_version: 10.x
 
 steps:
 - task: NodeTool@0 
@@ -23,5 +23,6 @@ steps:
 - script: |
     npm install --only=prod
     npm install mocha --save-dev
+    npm install -g @angular/cli
     npm run build
   displayName: 'npm install and build'
