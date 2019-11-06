@@ -24,5 +24,7 @@ steps:
     npm install --only=prod
     npm install mocha --save-dev
     npm install -g @angular/cli
+    mocha test --reporter mocha-junit-reporter
+    npm test
     npm run build
   displayName: 'npm install and build'
