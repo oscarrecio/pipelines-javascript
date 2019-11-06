@@ -21,7 +21,7 @@ steps:
     versionSpec: $(node_version)
 
 - script: |
-    npm install --only=dev
+    npm install --only=prod
     npm install mocha --save-dev
     npm run build
   displayName: 'npm install and build'
